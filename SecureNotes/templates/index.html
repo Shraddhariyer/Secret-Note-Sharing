@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Note</title>
+</head>
+
+<body>
+    <h2>Create a Secure Note</h2>
+    <form method="POST" action="/submit">
+        <textarea name="note" rows="10" cols="40" placeholder="Your note..." required></textarea><br>
+        <input type="password" name="password" placeholder="Optional password"><br>
+        <button type="submit">Generate Link</button>
+    </form>
+    {% if link %}
+    <p><strong>Note Link:</strong> <a href="{{ link }}">{{ link }}</a></p>
+    {% endif %}
+
+</body>
+
+</html>
